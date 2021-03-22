@@ -17,6 +17,7 @@
 .product-info {
     height: 100px;
     margin-bottom: 15px;
+    width: 100%;
 }
 
 .product > img {
@@ -36,4 +37,8 @@
     margin-top: 10px;
     border-color: #a88734 #9c7e31 #846a29;
     color: black;
+}
+
+.product-rating {
+    display: flex;
 }

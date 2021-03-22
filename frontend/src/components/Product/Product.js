@@ -1,21 +1,22 @@
 import React from 'react'
 import './Product.css'
-import leanup from '../../assets/Lean_Startup.png'
  
-function Product() {
+function Product({title,image,price,rating}) {
     return (
         <div className="product">
             <div className="product-info">
-                <p>The Lean Startup: How Constant Innovation creates radically successful business paperback</p>
+                <p>{title}</p>
                 <p className="product-price">
                     <small>$</small>
-                    <strong>19.99</strong>
+                    <strong>{price}</strong>
                 </p>
                 <div className="product-rating">
-                    <p>⭐</p>
+                    {Array(rating).fill().map((_,i)=>(
+                        <p>⭐</p>
+                    ))} 
                 </div>
             </div>
-            <img src ={leanup} alt="" />
+            <img src ={image} alt="" />
             <button>Add to basket</button>
         </div>
     )
