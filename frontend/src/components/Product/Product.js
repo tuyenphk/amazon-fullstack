@@ -4,7 +4,7 @@ import {useStateValue} from '../../reducer/StateProvider'
  
 function Product({id, title,image,price,rating}) { 
     const [{basket}, dispatch] = useStateValue();
-    console.log("this is a basket", basket)
+    
     const addToBasket = () => {
         //dispatch item into the data layer
         dispatch({
@@ -33,7 +33,7 @@ function Product({id, title,image,price,rating}) {
                 </div>
             </div>
             <img src ={image} alt="" />
-            <button>Add to basket</button>
+            <button onClick={addToBasket}>Add to basket</button>
         </div>
     )
 }
