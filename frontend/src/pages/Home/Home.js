@@ -17,12 +17,14 @@ function Home() {
 
                 <div className="home-row">
                     <Product 
+                        id={123}
                         title="The Lean Startup: How Constant Innovation creates radically successful business paperback"
                         price={19.99}
                         image={leanup}
                         rating={3}
                     />
                     <Product 
+                        id={14567}
                         title="VIVOHOME Stand Mixer, 650W 6 Speed 6 Quart Tilt-Head Kitchen Electric Food Mixer with Beater, Dough Hook and Wire Whip, Red, ETL Listed"
                         price={129.99}
                         image={mixer}
@@ -32,18 +34,21 @@ function Home() {
 
                 <div className="home-row">
                     <Product 
+                        id={250}
                         title="New Apple iPhone 12 (64GB, Blue) [Locked] + Carrier Subscription"
                         price={829}
                         image={iphone}
                         rating={4}
                     />
                     <Product 
+                        id={252}
                         title="New Apple iPad (10.2-inch, Wi-Fi, 32GB) - Gold (Latest Model, 8th Generation)"
                         price={329}
                         image={ipad}
                         rating={5}
                     />
                     <Product 
+                        id={254}
                         title="New Apple MacBook Pro with Apple M1 Chip (13-inch, 8GB RAM, 256GB SSD Storage) - Silver (Latest Model)"
                         price={1199.99}
                         image={macbook}
@@ -53,6 +58,7 @@ function Home() {
 
                 <div className="home-row">
                     <Product 
+                        id={1900}
                         title="Sony X900H 65-inch TV: 4K Ultra HD Smart LED TV with HDR, Game Mode for Gaming, and Alexa Compatibility - 2020 Model"
                         price={1398.00}
                         image={samsungtv} 
