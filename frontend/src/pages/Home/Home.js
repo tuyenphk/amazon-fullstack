@@ -20,7 +20,7 @@ function Home() {
                         title="The Lean Startup: How Constant Innovation creates radically successful business paperback"
                         price={19.99}
                         image={leanup}
-                        rating={5}
+                        rating={3}
                     />
                     <Product 
                         title="VIVOHOME Stand Mixer, 650W 6 Speed 6 Quart Tilt-Head Kitchen Electric Food Mixer with Beater, Dough Hook and Wire Whip, Red, ETL Listed"
