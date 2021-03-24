@@ -4,7 +4,7 @@ import CheckoutProduct from '../../components/CheckoutProduct/CheckoutProduct';
 import {Link, useHistory} from 'react-router-dom'
 import CurrencyFormat from 'react-currency-format'
 import { getBasketTotal } from '../../reducer/reducer'
-import axios from 'axios'
+import axios from '../../axios'
 
 import './Payment.css'
 import { useElements, useStripe, CardElement } from '@stripe/react-stripe-js';
@@ -34,6 +34,8 @@ function Payment() {
         };
         getClientSecret();
     }, [basket])
+
+    console.log('The secret is ', clientSecret);
 
     const handleSubmit = async (event) => {
         event.preventDefault();

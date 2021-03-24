@@ -14,6 +14,7 @@ app.use(express.json());
 
 // API routes
 app.get('/', (request, response) => response.status(200).send('hello'));
+
 app.post('/payments/create', async(request,response) => {
     const total = request.query.total;
     console.log('Payment Request is: ', total);
@@ -23,9 +24,9 @@ app.post('/payments/create', async(request,response) => {
     });
     //OK, created
     response.status(201).send({
-        clientSecret: paymentIntent.client_secret;
-    }) 
-})
+        clientSecret: paymentIntent.client_secret,
+    }); 
+});
 
 // Listen command
 exports.api = functions.https.onRequest(app);
