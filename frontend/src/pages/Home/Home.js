@@ -2,32 +2,33 @@ import React from 'react'
 import home from '../../assets/home.jpg'
 import Product from '../../components/Product/Product'
 import './Home.css'
-import leanup from '../../assets/product/Lean_Startup.png'
-import mixer from '../../assets/product/mixer.jpg'
+import watch from '../../assets/product/watch.jpg'
+import apple from '../../assets/product/apple.jpg'
 import iphone from '../../assets/product/iphone.webp'
 import ipad from '../../assets/product/ipad.webp'
 import macbook from '../../assets/product/macbook.webp'
 import samsungtv from '../../assets/product/samsung.webp'
+import FlipMove from 'react-flip-move';
 
 function Home() {
     return (
         <div className="home">
            <div className="home-container">
                 <img src={home} alt="" className="home-image"/>
-
+                <FlipMove >
                 <div className="home-row">
                     <Product 
                         id={123}
-                        title="The Lean Startup: How Constant Innovation creates radically successful business paperback"
-                        price={19.99}
-                        image={leanup}
-                        rating={3}
+                        title="Samsung Galaxy Watch Active 2 (40mm, GPS, Bluetooth) Smart Watch with Advanced Health Monitoring, Fitness Tracking, and Long lasting Battery, Pink Gold (US Version)"
+                        price={199.99}
+                        image={watch}
+                        rating={4}
                     />
                     <Product 
                         id={14567}
-                        title="VIVOHOME Stand Mixer, 650W 6 Speed 6 Quart Tilt-Head Kitchen Electric Food Mixer with Beater, Dough Hook and Wire Whip, Red, ETL Listed"
-                        price={129.99}
-                        image={mixer}
+                        title="New Apple Watch Series 6 (GPS, 40mm) - Gold Aluminum Case with Pink Sand Sport Band"
+                        price={374.99}
+                        image={apple}
                         rating={4}
                     />
                 </div>
@@ -65,6 +66,7 @@ function Home() {
                         rating={4}
                     />
                 </div>
+                </FlipMove>
            </div>
         </div>
     )
