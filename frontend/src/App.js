@@ -1,11 +1,35 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import Header from './components/Header/Header'
 import Home from './pages/Home/Home'
 import Checkout from './pages/Checkout/Checkout'
 import Login from './pages/Login/Login'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import {auth} from './firebase'
+import { useStateValue } from './reducer/StateProvider'
 
 function App() {
+  const [{}, dispatch] = useStateValue();
+
+  useEffect(() => {
+    //will only run once the app component loads
+    auth.onAuthStateChanged(authUser => {
+      console.log('The user is >>>', authUser);
+      if (authUser){
+        //the user is logged in or was logged in
+        dispatch({
+          type: 'SET_USER',
+          user: authUser
+        })
+      } else {
+        //the user is logged out
+        dispatch({
+          type: 'SET_USER',
+          user: null
+        })
+      }
+    })
+  }, [])
+
   return (
     <Router>
       <div className="App">
