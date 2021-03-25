@@ -1,0 +1,24 @@
+.order {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 2px;
+    background-color: darkgray;
+    width: 60%;
+    height: 200px;
+    margin-left: 300px;
+    margin-top: 200px;
+}
+
+.order > h1 {
+    padding-top: 30px;
+    font-size: 40px;
+}
+
+.order > h2 {
+    font-weight: 400;
+    text-align: center;
+    padding: 20px;
+}
