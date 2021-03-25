@@ -29,7 +29,7 @@ function Orders() {
     return (
         <div className="order">
             <h1>Thank you for your Order</h1>
-            <h2>We will send the confirmation email via your email with the tracking number when shipping.</h2>
+            <h2>We will send the confirmation via your email with the tracking number when the order is shipped.</h2>
             <div className="orders-order">
                 {orders?.map(order => {
                     <Order order={order} />
