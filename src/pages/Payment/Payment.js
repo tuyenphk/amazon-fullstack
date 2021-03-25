@@ -48,9 +48,8 @@ function Payment() {
             }
         }).then(({paymentIntent}) => {
             // connect firestore
-            db
-               .collection('users')
-               .doc(user?.id)
+            db.collection('users')
+               .doc(user?.uid)
                .collection('orders')
                .doc(paymentIntent.id)
                .set({
@@ -118,23 +117,24 @@ function Payment() {
                         <h3>Payment Method</h3>
                     </div>
                     <div className="payment-detail">
+                        <div className="payment-credit">Credit or debit card</div>
                         {/* Strip magic will go here */}
                         <form onSubmit={handleSubmit}>
-                            <CardElement onChange={handleChange} />
+                            <CardElement onChange={handleChange} className="payment-card" />
                             <div className="payment-priceContainer">
-                            <CurrencyFormat 
-                                renderText={(value)=>(
-                                    <h3>Order total: {value}</h3>
-                                )}
-                                decimalScale={2}
-                                value={getBasketTotal(basket)} 
-                                displayType={'text'}
-                                thousandSeparator={true}
-                                prefix={'$'}
-                            />
-                            <button disabled={processing || disabled || succeeded}>
-                                <span>{processing ? <p>Processing</p> : "Buy Now"}</span>
-                            </button>
+                                <CurrencyFormat 
+                                    renderText={(value)=>(
+                                        <h3>Order total: {value}</h3>
+                                    )}
+                                    decimalScale={2}
+                                    value={getBasketTotal(basket)} 
+                                    displayType={'text'}
+                                    thousandSeparator={true}
+                                    prefix={'$'}
+                                />
+                                <button className="payment-pay" disabled={processing || disabled || succeeded}>
+                                    <span>{processing ? <p>Processing</p> : "Buy Now"}</span>
+                                </button>
                             </div>
 
                             {error && <div>{error}</div>}

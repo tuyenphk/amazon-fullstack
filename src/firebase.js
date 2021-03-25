@@ -4,6 +4,7 @@ import firebase from "firebase";
 const firebaseConfig = {
   apiKey: "AIzaSyA0AC2a47naMYgyDvawZe6q91761WU6yAI",
   authDomain: "clone-9a4d5.firebaseapp.com",
+  databaseURL: "https://clone-9a4d5.firebaseio.com",
   projectId: "clone-9a4d5",
   storageBucket: "clone-9a4d5.appspot.com",
   messagingSenderId: "931963552528",
@@ -14,6 +15,6 @@ const firebaseConfig = {
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 
 const db = firebaseApp.firestore();
-const auth = firebase.auth();
+const auth = firebaseApp.auth();
 
 export {db, auth};

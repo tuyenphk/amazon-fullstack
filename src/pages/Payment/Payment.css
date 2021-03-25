@@ -24,3 +24,40 @@
 .payment-address, .payment-item, .payment-detail {
     flex: 0.8;
 }
+
+.payment-credit {
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.payment-card {
+    margin-bottom: 20px;
+}
+
+.payment-priceContainer {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    text-align: center;
+    width: 60%;
+    height: 90px;
+    justify-content: space-between;
+}
+
+.payment-priceContainer > h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.payment-pay {
+    background: #f0c14b;
+    border: 1px solid black;
+    border-radius: 2px;
+    width: 60%;
+    height: 30px;
+    border-color: #a88734 #9c7e31 #846a29;
+    color: black;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-left: 80px;
+}
