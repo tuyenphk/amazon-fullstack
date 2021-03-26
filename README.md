@@ -25,5 +25,5 @@ However, it runs successfully on the local machine. You can follow the instructi
 - The "Publishable key" will be added into the App.js
 - Create the Functions Firebase (backend for payment page): <strong>firebase init</strong> then choose <strong>Functions</strong>
 - When the backend folder is created, add the "Secret key" into the functions/index.js at stripe
-- Run backend: <strong>cd "backend located"</strong> then <strong>firebase emulators:start</strong>
+- Run backend: <strong>cd "backend located"</strong> then <strong>npm install express cors stripe</strong> then <strong>firebase emulators:start</strong>
 - Remember to run both frontend and backend so that when clicking on "Buy Now" button, the confirmation order will be displayed.
